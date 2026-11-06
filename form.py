@@ -17,7 +17,8 @@ userinfo_frame = tkinter.LabelFrame(frame, text="User Information")
 userinfo_frame.grid(row=0, column=0)
 
 tkinter.Label(userinfo_frame, text="Registration Form", font="ar 15 bold").grid(row=0, column=3, padx=10, pady=10)
-name = tkinter.Label(userinfo_frame, text="Name:")
+firstname = tkinter.Label(userinfo_frame, text="First Name:")
+lastname = tkinter.Label(userinfo_frame, text="Last Name:")
 phone = tkinter.Label(userinfo_frame, text="Phone:")
 email = tkinter.Label(userinfo_frame, text="Email:")
 location = tkinter.Label(userinfo_frame, text="Location:")
@@ -25,28 +26,32 @@ agreement = tkinter.Label(userinfo_frame, text="I agree to the terms and conditi
 #here we created grid that holds the labels
 
 
-name_entry = tkinter.Entry(userinfo_frame)
+firstname_entry = tkinter.Entry(userinfo_frame)
+lastname_entry = tkinter.Entry(userinfo_frame)
 phone_entry = tkinter.Entry(userinfo_frame)
 email_entry = tkinter.Entry(userinfo_frame)
 location_entry = tkinter.Entry(userinfo_frame)
 agreement_check = tkinter.Checkbutton(userinfo_frame)
 # entries are created for the user to input their information and a checkbox for agreement
 
-name.grid(row=1, column=2)
-name_entry.grid(row=1, column=3)
-phone.grid(row=2, column=2)
-phone_entry.grid(row=2, column=3)
-email.grid(row=3, column=2)
-email_entry.grid(row=3, column=3)
-location.grid(row=4, column=2)
-location_entry.grid(row=4, column=3)
-agreement.grid(row=5, column=3)
-agreement_check.grid(row=5, column=2)
+firstname.grid(row=1, column=2)
+firstname_entry.grid(row=1, column=3)
+lastname.grid(row=2, column=2)
+lastname_entry.grid(row=2, column=3)
+phone.grid(row=3, column=2)
+phone_entry.grid(row=3, column=3)
+email.grid(row=4, column=2)
+email_entry.grid(row=4, column=3)
+location.grid(row=5, column=2)
+location_entry.grid(row=5, column=3)
+agreement.grid(row=6, column=3)
+agreement_check.grid(row=6, column=2)
 # displaying the labels and entries in the grid
 
 
 def submit_form():
-    name_value = name_entry.get().strip()
+    firstname_value = firstname_entry.get().strip()
+    lastname_value = lastname_entry.get().strip()
     phone_value = phone_entry.get().strip()
     email_value = email_entry.get().strip()
     location_value = location_entry.get().strip()
@@ -54,7 +59,8 @@ def submit_form():
 
     entries = (
         "Registration Form Submitted\n\n"
-        f"Name: {name_value}\n"
+        f"First Name: {firstname_value}\n"
+        f"Last Name: {lastname_value}\n"
         f"Phone: {phone_value}\n"
         f"Email: {email_value}\n"
         f"Location: {location_value}\n"
@@ -66,9 +72,10 @@ def submit_form():
         with submission_file.open("a", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             if not file_exists:
-                writer.writerow(["Name", "Phone", "Email", "Location", "Agreed to terms"])
+                writer.writerow(["First Name", "Last Name", "Phone", "Email", "Location", "Agreed to terms"])
             writer.writerow([
-                name_value,
+                firstname_value,
+                lastname_value,
                 phone_value,
                 email_value,
                 location_value,
@@ -84,6 +91,6 @@ def submit_form():
 agreement_check_var = tkinter.BooleanVar(value=False)
 agreement_check.config(variable=agreement_check_var)
 button = tkinter.Button(userinfo_frame, text="Submit", command=submit_form)
-button.grid(row=6, column=3, padx=10, pady=10)
+button.grid(row=7, column=3, padx=10, pady=10)
     
 window.mainloop()
