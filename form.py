@@ -9,10 +9,12 @@ window = tkinter.Tk()
 frame = tkinter.Frame(window)
 frame.pack()
 window.configure(bg="blue")
+#Set the main window and frame for the registration form.
 
 
 window.title("Registration Form")
 window.geometry("500x300")
+#Set the title and size of the window.
 
 submission_file = Path(__file__).with_name("form_submissions.csv")
 #location of the file where the form submissions will be saved
