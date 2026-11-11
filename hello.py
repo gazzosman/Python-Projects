@@ -1,7 +1,5 @@
 import re
 
-import re
-
 message1 = 'Hello, World!'
 for i in range(5):
     print(message1)
