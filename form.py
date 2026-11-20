@@ -143,6 +143,7 @@ def submit_form():
     email_entry.delete(0, tkinter.END)
     location_entry.delete(0, tkinter.END)
     agreement_check_var.set(False)
+    #entries are cleared after the form is submitted successfully.
 
     messagebox.showinfo("Submitted", f"{entries}\n\nSaved to:\n{submission_file}")
     #shows a message box with the submitted information when the submit button is clicked
