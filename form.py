@@ -1,5 +1,6 @@
 from pathlib import Path
 import csv
+from pydoc import doc
 import re
 import tkinter
 from tkinter import ttk
@@ -136,6 +137,13 @@ def submit_form():
         return
     # alert pop up is displayed if the form data could not be saved to the CSV file due to an error.
 
+    firstname_entry.delete(0, tkinter.END)
+    lastname_entry.delete(0, tkinter.END)
+    phone_entry.delete(0, tkinter.END)
+    email_entry.delete(0, tkinter.END)
+    location_entry.delete(0, tkinter.END)
+    agreement_check_var.set(False)
+
     messagebox.showinfo("Submitted", f"{entries}\n\nSaved to:\n{submission_file}")
     #shows a message box with the submitted information when the submit button is clicked
 
@@ -146,5 +154,5 @@ agreement_check.config(variable=agreement_check_var)
 button = tkinter.Button(userinfo_frame, text="Submit", command=submit_form)
 button.grid(row=7, column=3, padx=10, pady=10)
 #submit button is created and linked to the submit_form function
-    
+
 window.mainloop()
