@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal interests including hiking, gardening, photography, and sketching." />
+    <title>Personal Interests</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Resume home">
+          <span class="brand-mark">IT</span>
+          <span>Professional Profile</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Resume</a>
+          <a class="active" href="interests.html">Personal Interests</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="interests-hero">
+        <div class="container">
+          <p class="eyebrow">Beyond the workbench</p>
+          <h1>Curiosity, outdoors,<br /><span>and creating.</span></h1>
+          <p>
+            The same attention to detail, patience, and problem-solving that shape
+            technical work also show up in time spent outside and making things by hand.
+          </p>
+        </div>
+      </section>
+
+      <section class="interests-content">
+        <div class="container interest-grid">
+          <article class="interest-card interest-card-featured">
+            <div class="interest-art art-hiking" aria-hidden="true">
+              <span class="sun"></span>
+              <span class="mountain mountain-back"></span>
+              <span class="mountain mountain-front"></span>
+              <span class="trail"></span>
+            </div>
+            <div class="interest-copy">
+              <p class="interest-number">01</p>
+              <h2>Hiking</h2>
+              <p>
+                Exploring trails offers time to reset, observe changing landscapes,
+                and stay physically active. It is a hands-on reminder that good
+                preparation and steady progress matter.
+              </p>
+            </div>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-art art-garden" aria-hidden="true">
+              <span class="garden-pot"></span>
+              <span class="stem stem-one"></span>
+              <span class="stem stem-two"></span>
+              <span class="leaf leaf-one"></span>
+              <span class="leaf leaf-two"></span>
+            </div>
+            <div class="interest-copy">
+              <p class="interest-number">02</p>
+              <h2>Gardening</h2>
+              <p>
+                Gardening combines planning with patience. It provides a tangible
+                way to learn from seasons, care for living things, and turn attention
+                into growth.
+              </p>
+            </div>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-art art-camera" aria-hidden="true">
+              <span class="camera-body"></span>
+              <span class="camera-lens"></span>
+              <span class="camera-flash"></span>
+            </div>
+            <div class="interest-copy">
+              <p class="interest-number">03</p>
+              <h2>Photography</h2>
+              <p>
+                Photography is the practice of noticing composition, light, and
+                moments that might otherwise pass by. It is both documentation and
+                creative interpretation.
+              </p>
+            </div>
+          </article>
+
+          <article class="interest-card">
+            <div class="interest-art art-sketch" aria-hidden="true">
+              <span class="paper"></span>
+              <span class="pencil"></span>
+              <span class="sketch-line line-one"></span>
+              <span class="sketch-line line-two"></span>
+            </div>
+            <div class="interest-copy">
+              <p class="interest-number">04</p>
+              <h2>Painting &amp; sketching</h2>
+              <p>
+                Drawing and painting offer an unhurried space to experiment,
+                observe form, and develop ideas visually without needing the
+                finished result to be perfect.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="interests-cta">
+        <div class="container">
+          <p class="eyebrow">The full picture</p>
+          <h2>Technical experience, with a creative side.</h2>
+          <a class="button button-light" href="index.html">View professional resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>IT Systems &amp; Security Professional</p>
+        <p>Greensboro, NC · <span id="year"></span></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
